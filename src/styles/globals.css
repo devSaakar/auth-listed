@@ -25,3 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.PLOT__CONTAINER > canvas {
+  width: 100% !important;
+}
