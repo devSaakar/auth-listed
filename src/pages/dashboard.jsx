@@ -5,20 +5,21 @@ import { BsBell } from "react-icons/bs";
 import ActivityGraph from "@/components/Dashboard/ActivityGraph";
 import TopProducts from "@/components/Dashboard/TopProducts";
 import TodaySchedule from "@/components/Dashboard/TodaySchedule";
+import MiniCard from "@/components/common/MiniCard";
+import { cardData } from "@/Utils/data";
 
 const Dashboard = () => {
   const session = useSession();
-  console.log("session :>> ", session);
   return (
-    <section className="flex flex-col p-6 w-50">
-      <div className="TOP__BANNER  flex rounded">
-        <div className="PAGE__TITLE__CONTAINER flex-6">
+    <section className="flex flex-col px-6 pt-6 w-50">
+      <div className="TOP__BANNER  flex rounded items-center">
+        <div className="PAGE__TITLE__CONTAINER grow">
           <p className="PAGE__TITLE font-bold text-2xl text-black">Dashboard</p>
         </div>
-        <div className="p-2 flex-3 rounded-lg flex justify-around items-center">
+        <div className="p-2 rounded-lg flex justify-around items-center gap-4">
           <div className="cursor-pointer">
             <label>
-              <input className="rounded-lg"></input>
+              <input placeholder="Search..." className="rounded-lg p-1 ps-2 outline-none"></input>
             </label>
           </div>
           <div className="cursor-pointer text-black font-bold">
@@ -40,6 +41,13 @@ const Dashboard = () => {
           )}
         </div>
       </div>
+
+      <div className="flex items-center justify-between my-6 gap-4">
+        {cardData?.map(({ Icon, title, subTitle, bgColor }) => (
+          <MiniCard key={title} Icon={Icon} title={title} subTitle={subTitle} bgColor={bgColor} />
+        ))}
+      </div>
+
       <ActivityGraph />
       <div className="PRODUCT__INSIGHTS flex w-100 justify-between gap-8 mt-10">
         <TopProducts />

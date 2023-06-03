@@ -23,14 +23,23 @@ const SignInForm = () => {
           Sign in with Apple
         </button>
       </div>
-      <form className="w-full bg-white p-4">
-        <label className="flex flex-col">
-          Email address <input type="text" className="bg-neutral-100" />
+
+      <form className="w-full bg-white p-6 rounded-lg">
+        <label className="flex flex-col mb-4">
+          Email address <input type="text" className="bg-neutral-100 rounded-lg py-1 mt-1" />
         </label>
         <label className="flex flex-col">
-          Password <input type="password" className="bg-neutral-100" />
+          Password <input type="password" className="bg-neutral-100 rounded-lg py-1 mt-1" />
         </label>
+
+        <p className="text-blue-700 my-4">Forgot password?</p>
+
+        <button className="bg-zinc-950 w-full text-white rounded-lg py-3 font-bold cursor-pointer">Sign In</button>
       </form>
+
+      <p className="w-full text-center mt-3 text-xs">
+        Don’t have an account? <span className="text-blue-700 cursor-pointer">Register here</span>
+      </p>
     </section>
   );
 };

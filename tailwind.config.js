@@ -14,7 +14,7 @@ module.exports = {
       },
       colors: {
         "btn-primary": "#858585",
-        "bg-primary": "#DDDDDD",
+        "bg-primary": "#f5f5f5",
       },
       flex: {
         2: "2 2 0%",
