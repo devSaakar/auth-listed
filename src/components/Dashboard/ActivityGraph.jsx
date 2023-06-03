@@ -72,7 +72,7 @@ const ActivityGraph = () => {
   useEffect(() => {
     if (userData) {
       data = {
-        labels: ["Week1", "Week2", "Week3", "Week4", "Week5"],
+        labels: ["Week0", "Week1", "Week2", "Week3", "Week4"],
         datasets: [
           {
             label: "Guest",
