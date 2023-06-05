@@ -67,7 +67,7 @@ const ActivityGraph = () => {
     },
   };
 
-  const { data: userData, error } = useApiUtils("http://localhost:3000/api/user/activity", false);
+  const { data: userData, error } = useApiUtils("https://auth-listed.vercel.app/api/user/activity", false);
 
   useEffect(() => {
     if (userData) {
