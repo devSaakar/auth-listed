@@ -12,11 +12,11 @@ const Dashboard = () => {
   const session = useSession();
   return (
     <section className="flex flex-col px-6 pt-0 w-50">
-      <div className="TOP__BANNER px-2 flex rounded items-center sticky top-0 bg-bg-primary">
+      <div className="TOP__BANNER flex rounded items-center sticky top-0 bg-bg-primary">
         <div className="PAGE__TITLE__CONTAINER grow">
           <p className="PAGE__TITLE font-bold text-2xl text-black">Dashboard</p>
         </div>
-        <div className="p-2 rounded-lg flex justify-around items-center gap-4">
+        <div className="py-2 rounded-lg flex justify-around items-center gap-4">
           <div className="cursor-pointer">
             <label>
               <input placeholder="Search..." className="rounded-lg p-1 ps-2 outline-none"></input>
